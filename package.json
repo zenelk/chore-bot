@@ -1,0 +1,12 @@
+{
+  "name": "chore-bot",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
+  },
+  "dependencies": {
+    "telegraf": "^3.20.0"
+  }
+}
