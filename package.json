@@ -4,7 +4,8 @@
     "standard": "*"
   },
   "scripts": {
-    "test": "standard && node my-tests.js"
+    "test": "standard && node my-tests.js",
+    "start": "node hello-world.js"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
