@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const Telegraf = require('telegraf')
+// const Telegraf = require('telegraf')
 var pg = require('pg')
 var express = require('express')
 var app = express()
@@ -20,8 +20,8 @@ app.get('/db', function (request, response) {
   })
 })
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.command('/test', (ctx) => ctx.reply('I am functioning normally.'))
-bot.command('/addChat')
+// const bot = new Telegraf(process.env.BOT_TOKEN)
+// bot.command('/test', (ctx) => ctx.reply('I am functioning normally.'))
+// bot.command('/addChat')
 
-bot.startPolling()
+// bot.startPolling()
