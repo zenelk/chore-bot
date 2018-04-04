@@ -2,9 +2,20 @@ require('dotenv').config()
 
 const Telegraf = require('telegraf')
 
-process.title = 'chore-bot'
-
 const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.command('/test', (ctx) => ctx.reply('I am functioning normally.'))
 
-bot.startPolling()
+function setupBot () {
+  bot.start((ctx) => ctx.reply('I\'m started'))
+  bot.help((ctx) => ctx.reply('There\'s no help for you.'))
+  bot.settings((ctx) => ctx.reply('No settings.'))
+
+  bot.command('/test', (ctx) => ctx.reply('I am functioning normally.'))
+
+  bot.startPolling()
+}
+
+// Get the bot's username from Telegram.
+bot.telegram.getMe().then((botInfo) => {
+  bot.options.username = botInfo.username
+  setupBot()
+})
