@@ -53,10 +53,6 @@ app.listen(app.get('port'), function () {
 //   })
 // })
 
-// app.listen(app.get('port'), function() {
-//   console.log('Node app is running on port', app.get('port'));
-// });
-
 // // const bot = new Telegraf(process.env.BOT_TOKEN)
 // // bot.command('/test', (ctx) => ctx.reply('I am functioning normally.'))
 // // bot.command('/addChat')
