@@ -4,11 +4,13 @@
     "standard": "*"
   },
   "scripts": {
-    "test": "standard && node my-tests.js",
-    "start": "node hello-world.js"
+    "start": "node index.js",
+    "stop": "taskkill /F /im node.exe"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
-    "telegraf": "^3.20.0"
+    "telegraf": "^3.20.0",
+    "pg": "6.x",
+    "express": "4.15.2"
   }
 }
